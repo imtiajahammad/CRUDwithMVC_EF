@@ -4,4 +4,25 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<p>I am describing the full process in steps.</p>
+<ul>
+    <li>Create Class Model; here it is Employee</li>
+    <li>Create a Context class which will be responsible to manage the transaction with Database; here it is EmployeeDbContext </li>
+    <li>Add the dbSets into EmployeeDBContext, check out the only dbset in EmployeeDBContext</li>
+    <li>Add a connectionString in web.config for your database with the same name as your context class; here it is EmployeeDBContext</li>
+    <li>
+        <ul>
+        Open Package Manager Console,
+        <li>execute "enable-migrations"</li>
+        <li>execute "add-migrations-migrationName"</li>
+        <li>execute "update-database"</li>
+        </ul>
+    </li>
+    <li>Now create a Controller and add actions; here it is EmployeeController</li>
+    <li>Create Views by Entity Framework putting view type,your class model,dbContext and sharedView layout </li>
+    <li>run the project and enjoy</li>
+    <li>Let me know if you stuct on something!</li>
+</ul>
+
+
+
