@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,10 +13,20 @@ namespace CRUDwithMVC_EF
     {
         protected void Application_Start()
         {
+
+            //
+            // Summary:
+            // This variable will be declared once the application is started and will keep the value till the application stopped. 
+            // So once the application launched, it will be counting on the visitors until the application is online*/
             Application["Totaluser"] = 0;
-            /* Application["Totaluser"] = 0;
-             * This variable will be declared once the application is started and will keep the value till the application stopped. 
-             * So once the application launched, it will be counting on the visitors until the application is online*/
+
+
+
+            //
+            // Summary:
+            //     this helps to drop or create the tables and database if there is a change in class models
+            //     when the application starts
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EmployeeDBContext>());
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
