@@ -12,6 +12,8 @@
     <h4>Employee</h4>
     <hr />
     <dl class="dl-horizontal">
+
+
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -50,6 +52,13 @@
 
         <dd>
             @Html.DisplayFor(model => model.TaxRate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.Name)
         </dd>
 
     </dl>
