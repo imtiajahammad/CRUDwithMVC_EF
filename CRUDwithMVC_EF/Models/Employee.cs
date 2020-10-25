@@ -19,5 +19,8 @@ namespace CRUDwithMVC_EF.Models
         public int Salary { get; set; }
         [DisplayFormat(DataFormatString ="{0:0.###}")]
         public float TaxRate { get; set; }
+        [ForeignKey("Department")]
+        public int DepartmentId { get; set; }
+        public virtual Department Department { get; set; }
     }
 }
