@@ -131,24 +131,9 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DataLayer\EmployeeDBContext.cs" />
+    <Compile Include="DataLayer\EmployeeDBContextSeeder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010031605151_initialMigration.cs" />
-    <Compile Include="Migrations\202010031605151_initialMigration.designer.cs">
-      <DependentUpon>202010031605151_initialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010031608527_addedTableNameinEmployeeClass.cs" />
-    <Compile Include="Migrations\202010031608527_addedTableNameinEmployeeClass.designer.cs">
-      <DependentUpon>202010031608527_addedTableNameinEmployeeClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010031645491_EmployeeClassDobApplyFormatEditMode.cs" />
-    <Compile Include="Migrations\202010031645491_EmployeeClassDobApplyFormatEditMode.designer.cs">
-      <DependentUpon>202010031645491_EmployeeClassDobApplyFormatEditMode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202010241545380_DepartmentEntityAdded.cs" />
-    <Compile Include="Migrations\202010241545380_DepartmentEntityAdded.designer.cs">
-      <DependentUpon>202010241545380_DepartmentEntityAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
@@ -217,20 +202,6 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202010031605151_initialMigration.resx">
-      <DependentUpon>202010031605151_initialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010031608527_addedTableNameinEmployeeClass.resx">
-      <DependentUpon>202010031608527_addedTableNameinEmployeeClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010031645491_EmployeeClassDobApplyFormatEditMode.resx">
-      <DependentUpon>202010031645491_EmployeeClassDobApplyFormatEditMode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202010241545380_DepartmentEntityAdded.resx">
-      <DependentUpon>202010241545380_DepartmentEntityAdded.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

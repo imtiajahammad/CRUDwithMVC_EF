@@ -9,7 +9,10 @@
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            //AutomaticMigrationsEnabled = false;
+            //
+            // to use the EmployeeDBContextSeeder to make test database data
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(CRUDwithMVC_EF.EmployeeDBContext context)

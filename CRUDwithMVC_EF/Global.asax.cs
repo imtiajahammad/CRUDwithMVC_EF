@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRUDwithMVC_EF.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -26,7 +27,16 @@ namespace CRUDwithMVC_EF
             // Summary:
             //     this helps to drop or create the tables and database if there is a change in class models
             //     when the application starts
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EmployeeDBContext>());
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<EmployeeDBContext>());
+
+            //
+            // Summary:
+            //     this helps to drop or create the tables and database according to your data if there is a change in class models
+            //     when the application starts
+            Database.SetInitializer(new EmployeeDBContextSeeder());
+
+
+
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
