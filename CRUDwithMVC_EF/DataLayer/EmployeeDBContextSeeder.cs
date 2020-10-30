@@ -78,11 +78,34 @@ namespace CRUDwithMVC_EF.DataLayer
                 }
             };
 
+            SelfReferencingEmployee selfReferencingEmployee = new SelfReferencingEmployee()
+            {
+                EmployeeName="Developer1",
+                Manager=new SelfReferencingEmployee
+                {
+                    EmployeeName = "TeamLead1"
+                }
+            };
+            SelfReferencingEmployee selfReferencingEmployee2 = new SelfReferencingEmployee()
+            {
+                EmployeeName = "CEO"
+            };
+            SelfReferencingEmployee selfReferencingEmployee3 = new SelfReferencingEmployee()
+            {
+                EmployeeName = "TeamLead2"
+            };
+
+
 
             context.Departments.Add(department);
             context.Departments.Add(department2);
             context.Persons.Add(person);
             context.People.Add(people);
+
+            context.SelfReferencingEmployees.Add(selfReferencingEmployee);
+            context.SelfReferencingEmployees.Add(selfReferencingEmployee2);
+            context.SelfReferencingEmployees.Add(selfReferencingEmployee3);
+
 
             base.Seed(context);
         }

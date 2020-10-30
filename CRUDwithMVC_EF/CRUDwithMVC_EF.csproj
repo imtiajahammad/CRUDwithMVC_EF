@@ -132,6 +132,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\PersonsController.cs" />
+    <Compile Include="Controllers\SelfReferencingEmployeesController.cs" />
     <Compile Include="DataLayer\EmployeeDBContext.cs" />
     <Compile Include="DataLayer\EmployeeDBContextSeeder.cs" />
     <Compile Include="Global.asax.cs">
@@ -143,6 +144,7 @@
     <Compile Include="Models\People.cs" />
     <Compile Include="Models\PeopleContactDetail.cs" />
     <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\SelfReferencingEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,6 +203,11 @@
     <Content Include="Views\People\Details.cshtml" />
     <Content Include="Views\People\Edit.cshtml" />
     <Content Include="Views\People\Index.cshtml" />
+    <Content Include="Views\SelfReferencingEmployees\Create.cshtml" />
+    <Content Include="Views\SelfReferencingEmployees\Delete.cshtml" />
+    <Content Include="Views\SelfReferencingEmployees\Details.cshtml" />
+    <Content Include="Views\SelfReferencingEmployees\Edit.cshtml" />
+    <Content Include="Views\SelfReferencingEmployees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

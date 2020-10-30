@@ -14,6 +14,7 @@ namespace CRUDwithMVC_EF
 
         public DbSet<Person> Persons { get; set; }
         public DbSet<People> People { get; set; }
+        public DbSet<SelfReferencingEmployee> SelfReferencingEmployees { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             /*conditional mapping-start
@@ -89,10 +90,15 @@ namespace CRUDwithMVC_EF
 
 
 
+            /*Self-Referencing-start*/
+            modelBuilder.Entity<SelfReferencingEmployee>()
+                .HasOptional(e => e.Manager)
+                .WithMany()
+                .HasForeignKey(m => m.ManagerID);
+            /*Self-Referencing-end*/
 
 
 
-            
 
 
 
