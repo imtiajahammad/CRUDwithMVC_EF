@@ -16,6 +16,31 @@ namespace CRUDwithMVC_EF
         public DbSet<People> People { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            /*conditional mapping-start
+            modelBuilder.Entity<Employee>()
+               .Map(m => m.Requires("IsPermanent")
+               .HasValue(true)
+               )
+               .Ignore(m => m.IsPermanent);
+               */
+
+            /*modelBuilder.Entity<Employee>()
+                    .Property(p => p.IsPermanent)
+                    .HasColumnName("IsPermanent")
+                    .HasColumnType("bool");*/
+
+
+            /*modelBuilder.Entity<Employee>()
+                .Ignore(m => m.IsPermanent);*/
+
+
+            /*conditional mapping-end*/
+
+
+
+
+
+
             //Table Splitting-start
             modelBuilder.Entity<Person>()
             // Specify properties to map to Employees table
@@ -61,6 +86,15 @@ namespace CRUDwithMVC_EF
                 .HasRequired(p => p.PeopleContactDetail)
                 .WithRequiredPrincipal(c => c.People);
             //Entity Splitting-end
+
+
+
+
+
+
+            
+
+
 
             base.OnModelCreating(modelBuilder);
         }

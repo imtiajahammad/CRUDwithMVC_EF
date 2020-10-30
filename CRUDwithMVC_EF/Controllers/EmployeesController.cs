@@ -49,7 +49,7 @@ namespace CRUDwithMVC_EF.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Dob,Salary,TaxRate,DepartmentId")] Employee employee)
+        public ActionResult Create([Bind(Include = "Id,FirstName,LastName,Dob,Salary,TaxRate,IsPermanent,DepartmentId")] Employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace CRUDwithMVC_EF.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Dob,Salary,TaxRate,DepartmentId")] Employee employee)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,LastName,Dob,Salary,TaxRate,IsPermanent,DepartmentId")] Employee employee)
         {
             if (ModelState.IsValid)
             {

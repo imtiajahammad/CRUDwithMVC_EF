@@ -23,7 +23,8 @@ namespace CRUDwithMVC_EF.DataLayer
                         LastName="Ahammad",
                         Dob=Convert.ToDateTime("2020-02-12"),
                         Salary=26000,
-                        TaxRate=2.3f
+                        TaxRate=2.3f,
+                        IsPermanent=true
                     },
                     new Employee
                     {
@@ -31,7 +32,8 @@ namespace CRUDwithMVC_EF.DataLayer
                         LastName="Karim",
                         Dob=Convert.ToDateTime("2000-02-02"),
                         Salary=56000,
-                        TaxRate=1.3f
+                        TaxRate=1.3f,
+                        IsPermanent=false
                     }
                 }
             };
@@ -48,7 +50,8 @@ namespace CRUDwithMVC_EF.DataLayer
                         LastName="Fitzerman",
                         Dob=Convert.ToDateTime("2010-12-01"),
                         Salary=6000,
-                        TaxRate=3.3f
+                        TaxRate=3.3f,
+                        IsPermanent=true
                     }
                 }
             };
