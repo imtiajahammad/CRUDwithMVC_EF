@@ -1,0 +1,64 @@
+﻿@model CRUDwithMVC_EF.Models.People
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>People</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PeopleContactDetail.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeopleContactDetail.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PeopleContactDetail.Mobile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeopleContactDetail.Mobile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PeopleContactDetail.LandLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeopleContactDetail.LandLine)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PeopleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

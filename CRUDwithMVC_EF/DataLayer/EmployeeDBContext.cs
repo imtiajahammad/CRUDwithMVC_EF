@@ -13,9 +13,10 @@ namespace CRUDwithMVC_EF
         public DbSet<Department> Departments { get; set; }
 
         public DbSet<Person> Persons { get; set; }
-
+        public DbSet<People> People { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //Table Splitting-start
             modelBuilder.Entity<Person>()
             // Specify properties to map to Employees table
                 .Map(map =>
@@ -43,6 +44,24 @@ namespace CRUDwithMVC_EF
 
                     map.ToTable("PersonContactDetails");
                 });
+            //Table Splitting-end
+
+
+
+            //Entity Splitting-start
+            modelBuilder.Entity<People>()
+                .HasKey(pk => pk.PeopleID)
+                .ToTable("People");
+
+            modelBuilder.Entity<PeopleContactDetail>()
+                .HasKey(pk => pk.PeopleID)
+                .ToTable("People");
+
+            modelBuilder.Entity<People>()
+                .HasRequired(p => p.PeopleContactDetail)
+                .WithRequiredPrincipal(c => c.People);
+            //Entity Splitting-end
+
             base.OnModelCreating(modelBuilder);
         }
     }

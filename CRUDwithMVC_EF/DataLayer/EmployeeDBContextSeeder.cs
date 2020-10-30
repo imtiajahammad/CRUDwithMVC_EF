@@ -61,9 +61,25 @@ namespace CRUDwithMVC_EF.DataLayer
                 Mobile = "testMobile",
                 Landline = "testLandline"
             };
+            People people= new People()
+            {
+                FirstName = "testPeopleFirstName",
+                LastName = "testPeopleLastName",
+                Gender="testPeopleGender",
+                PeopleContactDetail = new PeopleContactDetail
+                {
+
+                        Email="testPeopleEmail",
+                        Mobile="testPeopleMobile",
+                        LandLine="testPeopleLandLine"     
+                }
+            };
+
+
             context.Departments.Add(department);
             context.Departments.Add(department2);
             context.Persons.Add(person);
+            context.People.Add(people);
 
             base.Seed(context);
         }
