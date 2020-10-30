@@ -52,8 +52,18 @@ namespace CRUDwithMVC_EF.DataLayer
                     }
                 }
             };
+            Person person = new Person()
+            {
+                FirstName = "testFirstName",
+                LastName = "testLastname",
+                Gender = "testGender",
+                Email = "testEmail",
+                Mobile = "testMobile",
+                Landline = "testLandline"
+            };
             context.Departments.Add(department);
             context.Departments.Add(department2);
+            context.Persons.Add(person);
 
             base.Seed(context);
         }
